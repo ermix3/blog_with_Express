@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../inc/head'); -%>
+<body>
+<!-- header -->
+<%- include('../inc/header'); -%>
+
+<!-- content -->
+<div class="container my-4">
+    <div class="row">
+        <h1 class="display-3 text-center">Create New Post</h1>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-7 col-lg-8 my-3">
+            <form action="/posts" method="post">
+                <div>
+                    <label for="title" class="form-label">Post Title</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Post Title.." required>
+                </div>
+                <div>
+                    <label for="snippet" class="form-label">Post Snippet</label>
+                    <input type="text" name="snippet" id="snippet" class="form-control" placeholder="Post Snippet.." required>
+                </div>
+                <div>
+                    <label for="body" class="form-label">Post Body</label>
+                    <textarea name="body" id="body" class="form-control" cols="30" rows="6" placeholder="Post Content.." required></textarea>
+                </div>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-lg btn-dark d-inline me-3">
+                        <a href="/" class="text-decoration-none text-light">Back</a>
+                    </button>
+                    <button type="submit" class="btn btn-lg btn-success">Create</button>
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<!-- footer -->
+<%- include('../inc/footer'); -%>
+
+<!--scripts-->
+<%- include('../inc/scripts'); -%>
+
+</body>
+</html>

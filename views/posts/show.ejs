@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../inc/head'); -%>
+<body>
+<!-- header -->
+<%- include('../inc/header'); -%>
+
+<!-- content -->
+<div class="container">
+    <div class="row">
+        <h1 class="dispaly-4"><%= post.title %></h1>
+        <h5 class="h5"><%= post.createdAt %></h5>
+        <h5 class="h5"><%= post.updatedAt %></h5>
+        <p class="card-text"><%= post.body %></p>
+        <div class="d-flex mb-3">
+            <a class="btn btn-outline-dark d-inline me-3" href="/">Back</a>
+            <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="d-flex-inline">
+                <button type="submit" class="btn btn-outline-danger">Delete</button>
+            </form>
+            <a class="btn btn-outline-warning d-inline ms-3" href="<%= post._id %>/edit">Edit</a>
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<%- include('../inc/footer'); -%>
+
+<!--scripts-->
+<%- include('../inc/scripts'); -%>
+</body>
+</html>

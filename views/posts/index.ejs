@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../inc/head'); -%>
+<body>
+<!-- header -->
+<%- include('../inc/header'); -%>
+
+<!-- content -->
+<div class="container my-5">
+    <% if (posts.length > 0 ) { %>
+        <div class="row row-cols-md-3 row-cols-lg-4 ">
+            <% posts.forEach(post => { %>
+                <div class="col">
+                    <div class="card border-light mb-3 shadow" style="max-width: 18rem;">
+                        <div class="card-header">
+                            <a href="/posts/<%= post._id %>" class="h4"><%= post.title %></a>
+                            <br>
+                            <small>Created at: <%= new Date(post.createdAt).getFullYear() +'/'+new Date(post.createdAt).getMonth()+'/'+new Date(post.createdAt).getDay()  %> </small>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text"><%= post.body %></p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Last updated 3 mins ago</small>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    <% } else { %>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>No posts found :) </h1>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<!-- footer -->
+<%- include('../inc/footer'); -%>
+
+<!--scripts-->
+<%- include('../inc/scripts'); -%>
+
+</body>
+</html>
