@@ -7,7 +7,6 @@
 
 ## Screenshots
 
----
 ![About page](screens/All posts.png)
 ![About page](screens/details.png)
 ![About page](screens/update.png)
