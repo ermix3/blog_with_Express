@@ -29,7 +29,7 @@ const deletePost = (req, res) => {
 
 const updatePost = (req, res) => {
     Post.findByIdAndUpdate(req.params.id, req.body)
-        .then(() => res.redirect('/'))
+        .then(() => res.redirect('/posts/' + req.params.id))
         .catch(err => res.render('error', {error: err}));
 }
 

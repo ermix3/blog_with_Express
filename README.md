@@ -6,6 +6,15 @@
 ---
 This is a simple web app that I built to practice my skills in building web apps.
 
+## Screenshots
+
+---
+![About page](screens/All posts.png)
+![About page](screens/details.png)
+![About page](screens/update.png)
+![About page](screens/add.png)
+![About page](screens/about.png)
+
 ## Build With:
 
 ---

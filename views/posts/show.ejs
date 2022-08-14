@@ -7,18 +7,22 @@
 
 <!-- content -->
 <div class="container">
-    <div class="row">
-        <h1 class="dispaly-4"><%= post.title %></h1>
-        <h5 class="h5"><%= post.createdAt %></h5>
-        <h5 class="h5"><%= post.updatedAt %></h5>
-        <p class="card-text"><%= post.body %></p>
-        <div class="d-flex mb-3">
+    <div class="row mb-5">
+        <div class="d-flex justify-content-end my-3">
             <a class="btn btn-outline-dark d-inline me-3" href="/">Back</a>
             <form action="/posts/<%= post._id %>?_method=DELETE" method="POST" class="d-flex-inline">
                 <button type="submit" class="btn btn-outline-danger">Delete</button>
             </form>
             <a class="btn btn-outline-warning d-inline ms-3" href="<%= post._id %>/edit">Edit</a>
         </div>
+        <h1 class="dispaly-4"><%= post.title %></h1>
+        <hr class="mb-0">
+        <div class="d-flex justify-content-between mb-3">
+            <small>Created at: <%= new Date(post.createdAt).getFullYear() +'/' + (new Date(post.createdAt).getMonth()+1) + '/' + new Date(post.createdAt).getDate()  %> </small>
+            <small>Updated at: <%= new Date(post.updatedAt).getFullYear() +'/' + (new Date(post.updatedAt).getMonth()+1) + '/' + new Date(post.updatedAt).getDate()  %> </small>
+        </div>
+
+        <p class="card-text"><%= post.body %></p>
     </div>
 </div>
 
@@ -27,5 +31,6 @@
 
 <!--scripts-->
 <%- include('../inc/scripts'); -%>
+
 </body>
 </html>

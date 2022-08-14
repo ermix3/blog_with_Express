@@ -8,18 +8,18 @@
 <!-- content -->
 <div class="container my-5">
     <% if (posts.length > 0 ) { %>
-        <div class="row row-cols-md-3 row-cols-lg-4 ">
+        <div class="row row-cols-xs-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 ">
             <% posts.forEach(post => { %>
                 <div class="col">
                     <div class="card border-light mb-3 shadow" style="max-width: 18rem;">
                         <div class="card-header">
-                            <a href="/posts/<%= post._id %>" class="h4"><%= post.title %></a>
-                            <br>
-                            <small>Created at: <%= new Date(post.createdAt).getFullYear() +'/'+new Date(post.createdAt).getMonth()+'/'+new Date(post.createdAt).getDay()  %> </small>
+                            <p class="h4"><%= post.title %></p>
+                            <small>Created at: <%= new Date(post.createdAt).getFullYear() +'/' + (new Date(post.createdAt).getMonth()+1) + '/' + new Date(post.createdAt).getDate()  %> </small>
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Light card title</h5>
-                            <p class="card-text"><%= post.body %></p>
+                            <p class="card-text"><%= post.body.slice(0,100) %> ...</p>
+                            <a href="/posts/<%= post._id %>" > Read More</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Last updated 3 mins ago</small>
