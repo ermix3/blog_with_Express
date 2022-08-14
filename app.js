@@ -7,7 +7,7 @@ const methodOverride = require('method-override');
 const app = express();
 
 // Cinnect to the database
-const dbURI = 'mongodb+srv://ermix:ermix@blog-with-node.swwvqfw.mongodb.net/blog-with-node?retryWrites=true&w=majority'
+const dbURI = 'mongodb+srv://express:express@blog-with-node.swwvqfw.mongodb.net/blog-with-node?retryWrites=true&w=majority'
 
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => app.listen(3000, () => console.log('listening on port 3000 ... http://localhost:3000')))
