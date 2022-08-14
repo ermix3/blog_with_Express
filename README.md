@@ -6,11 +6,15 @@
 > This is a simple web app that I built to practice my skills in building web apps.
 
 ## Screenshots
-
+* All Posts
 ![About page](screens/All-Posts.png)
+* Details Post
 ![About page](screens/Details.png)
+* Update Post
 ![About page](screens/update.png)
+* Add Post
 ![About page](screens/Add.png)
+* About Post
 ![About page](screens/About.png)
 
 ## Build With:
