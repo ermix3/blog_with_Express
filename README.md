@@ -7,11 +7,11 @@
 
 ## Screenshots
 
-![About page](screens/All posts.png)
-![About page](screens/details.png)
+![About page](screens/All-Posts.png)
+![About page](screens/Details.png)
 ![About page](screens/update.png)
-![About page](screens/add.png)
-![About page](screens/about.png)
+![About page](screens/Add.png)
+![About page](screens/About.png)
 
 ## Build With:
 
